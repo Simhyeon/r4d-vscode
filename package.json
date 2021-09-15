@@ -1,0 +1,25 @@
+{
+    "name": "r4d",
+    "displayName": "R4d",
+    "description": "Text oriented macro processor",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "r4d",
+            "aliases": ["r4d", "r4d"],
+            "extensions": [".r4d"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "r4d",
+            "scopeName": "source.r4d",
+            "path": "./syntaxes/r4d.tmLanguage.json"
+        }]
+    }
+}
