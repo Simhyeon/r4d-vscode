@@ -3,29 +3,27 @@
 	"name": "r4d",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#definition"
 		},
 		{
-			"include": "#strings"
+			"include": "#macro"
+		},
+		{
+			"include": "#literal"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.r4d",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+		"definition": {
+			"name": "support.type.r4d",
+			"match": "\\$define"
 		},
-		"strings": {
-			"name": "string.quoted.double.r4d",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.r4d",
-					"match": "\\\\."
-				}
-			]
+		"macro": {
+			"name": "support.function.r4d",
+			"match": "\\$[a-zA-Z0-9_]*"
+		},
+		"literal": {
+			"name": "support.constant.r4d",
+			"match": "\\\\\\*.*?\\*\\\\"
 		}
 	},
 	"scopeName": "source.r4d"

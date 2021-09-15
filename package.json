@@ -3,9 +3,20 @@
     "displayName": "R4d",
     "description": "Text oriented macro processor",
     "version": "0.0.1",
+    "author": {
+        "name": "simoncreek",
+        "email": "simoncreek@tutanota.com"
+    },
+    "license": "MIT",
+    "publisher": "simoncreek",
     "engines": {
         "vscode": "^1.60.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/simhyeon/r4d-vscode"
+    },
+    "keywords": ["cli","text processin", "macro"],
     "categories": [
         "Programming Languages"
     ],
@@ -20,6 +31,12 @@
             "language": "r4d",
             "scopeName": "source.r4d",
             "path": "./syntaxes/r4d.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+                "language": "r4d",
+                "path": "./snippets/snippets.json"
+            }
+        ]
     }
 }

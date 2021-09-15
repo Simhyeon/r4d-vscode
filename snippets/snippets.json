@@ -1,0 +1,247 @@
+{
+	"define": {
+		"prefix": ["define", "$define"],
+		"body" : [
+			"\\$define(${1:Macro name},${2:Arguments}=${3:Body})"
+		],
+		"description":"Macro definition"
+	},
+	"undefine": {
+		"prefix": ["undef", "$undef"],
+		"body" : [
+			"\\$undef(${1:Macro name})"
+		],
+		"description":"Undefine macro"
+	},
+	"append": {
+		"prefix": ["append", "$append"],
+		"body" : [
+			"\\$append(${1:Macro name},${2:Content To Append})"
+		],
+		"description":"Append to macro"
+	},
+	"pause": {
+		"prefix": ["pause", "$pause"],
+		"body" : [
+			"\\$pause(${1:switch=true|false})"
+		],
+		"description":"Pause processing"
+	},
+	"include": {
+		"prefix": ["include", "$include"],
+		"body" : [
+			"\\$include(${1:File name})"
+		],
+		"description":"Include file content"
+	},
+	"temp out": {
+		"prefix": ["tempout", "$tempout"],
+		"body" : [
+			"\\$tempout(${1:Content to save})"
+		],
+		"description":"Send content to temp file"
+	},
+	"temp in": {
+		"prefix": ["tempin", "$tempin"],
+		"body" : [
+			"\\$tempin()"
+		],
+		"description":"Include temporary file's content"
+	},
+	"tempto": {
+		"prefix": ["tempto", "$tempto"],
+		"body" : [
+			"\\$tempto(${1:File name})"
+		],
+		"description":"Set temp file name"
+	},
+	"redir": {
+		"prefix": ["redir", "$redir"],
+		"body" : [
+			"\\$redir(${1:switch=true|false)"
+		],
+		"description":"Redirect texts to temp file"
+	},
+	"file out": {
+		"prefix": ["fileout", "$fileout"],
+		"body" : [
+			"\\$fileout(${1:Truncate=true|false},${2:File name},${3:Content})"
+		],
+		"description":"Save content to file"
+	},
+	"env": {
+		"prefix": ["env", "$env"],
+		"body" : [
+			"\\$env(${1:Variable name})"
+		],
+		"description":"Get environment variable"
+	},
+	"path": {
+		"prefix": ["path", "$path"],
+		"body" : [
+			"\\$path(${1:Prior},${2:Later})"
+		],
+		"description":"Merge two values into a single path"
+	},
+	"bind": {
+		"prefix": ["bind", "$bind"],
+		"body" : [
+			"\\$bind(${1:Binding name},${2:Content to bind})"
+		],
+		"description":"Create a local binding(alias)"
+	},
+	"pipe": {
+		"prefix": ["pipe", "$pipe"],
+		"body" : [
+			"\\$pipe(${1:Value to pipe})"
+		],
+		"description":"Save value to pipe"
+	},
+	"Repeat": {
+		"prefix": ["repeat", "$repeat"],
+		"body" : [
+			"\\$repeat(${1:Count},${2:Content to repeat})"
+		],
+		"description":"Repeat given content"
+	},
+	"foreach": {
+		"prefix": ["foreach", "$foreach"],
+		"body" : [
+			"\\$foreach(\\*${1:Values}*\\,${2:Content})"
+		],
+		"description":"Loop values"
+	},
+	"forloop": {
+		"prefix": ["forloop", "$forloop"],
+		"body" : [
+			"\\$forloop(${1:Min value},${2:Max value},${3:Content})"
+		],
+		"description":"Loop range"
+	},
+	"eval": {
+		"prefix": ["eval", "$eval"],
+		"body" : [
+			"\\$eval(${1:Expression})"
+		],
+		"description":"Evaluate expression"
+	},
+	"if": {
+		"prefix": ["if", "$if"],
+		"body" : [
+			"\\$if(${1:Cond=true|false},${2:Content})"
+		],
+		"description":"Print according to condition"
+	},
+	"ifelse": {
+		"prefix": ["ifelse", "$ifelse"],
+		"body" : [
+			"\\$ifelse(${1:Cond=true|false},${2:true content},${3:false content})"
+		],
+		"description":"Print branches accorindg to condition"
+	},
+	"ifdef": {
+		"prefix": ["ifdef", "$ifdef"],
+		"body" : [
+			"\\$ifdef(${1:Macro name})"
+		],
+		"description":"Check if macro exists"
+	},
+	"syscmd": {
+		"prefix": ["syscmd", "$syscmd"],
+		"body" : [
+			"\\$syscmd(${1:Command})"
+		],
+		"description":"Execute system command"
+	},
+	"sub": {
+		"prefix": ["sub", "$sub"],
+		"body" : [
+			"\\$sub(${1:Min index},${2:Max index},${3:Target string})"
+		],
+		"description":"Get a substring"
+	},
+	"tr": {
+		"prefix": ["tr", "$tr"],
+		"body" : [
+			"\\$tr(${1:Target string},${2:From characters},${3:To characters})"
+		],
+		"description":"Translate characters"
+	},
+	"len": {
+		"prefix": ["len", "$len"],
+		"body" : [
+			"\\$len(${1:Target string})"
+		],
+		"description":"Get length of the string"
+	},
+	"regex": {
+		"prefix": ["regex", "$regex"],
+		"body" : [
+			"\\$regex(${1:String},${2:Match expression},${3:Substitute})"
+		],
+		"description":"Apply regex substitute"
+	},
+	"trim": {
+		"prefix": ["trim", "trim"],
+		"body" : [
+			"\\$trim(${1:String})"
+		],
+		"description":"Trim whitespaces"
+	},
+	"chomp": {
+		"prefix": ["chomp", "chomp"],
+		"body" : [
+			"\\$chomp(${1:String})"
+		],
+		"description":"Remove duplicate lines"
+	},
+	"comp": {
+		"prefix": ["comp", "comp"],
+		"body" : [
+			"\\$comp(${1:String})"
+		],
+		"description":"Trim and chomp"
+	},
+	"nl": {
+		"prefix": ["nl", "nl"],
+		"body" : [
+			"\\$nl()"
+		],
+		"description":"Print new line which respects formatter"
+	},
+	"lipsum": {
+		"prefix": ["lipsum", "lipsum"],
+		"body" : [
+			"\\$lipsum(${1:Word count})"
+		],
+		"description":"Create placeholder text"
+	},
+	"time": {
+		"prefix": ["time", "time"],
+		"body" : [
+			"\\$time()"
+		],
+		"description":"Print current local time"
+	},
+	"date": {
+		"prefix": ["date", "date"],
+		"body" : [
+			"\\$date()"
+		],
+		"description":"Print current local date"
+	},
+	"from": {
+		"prefix": ["from", "from"],
+		"body" : [
+			"\\$from(\\*${1:CSV value}*\\,${2:Macro name})"
+		],
+		"description":"Invoke macro for given csv contnet"
+	},
+	"table": {
+		"prefix": ["table", "table"],
+		"body" : [
+			"\\$table(${1:Table format=github|wikitext|html},\\*${2:CSV value}*\\)"
+		],
+		"description":"Remove duplicate lines"
+	}
+}
