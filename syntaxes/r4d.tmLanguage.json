@@ -14,16 +14,36 @@
 	],
 	"repository": {
 		"definition": {
-			"name": "support.type.r4d",
-			"match": "\\$define"
+			"begin": "(\\$define)\\(",
+			"end": "(=)"
+			,"captures": {
+				"1": {"name": "keyword.operator.new.r4d"}
+			}
+			,"patterns": [
+				{
+					"match": "[\\s\\r\\n]*([a-zA-Z0-9_]*)\\s*,",
+					"captures": {
+						"1": {"name": "support.class.r4d"}
+					}
+				},
+				{
+					"match": "([^,=][a-zA-Z0-9_\\s]*)",
+					"captures": {
+						"1": {"name": "support.function.r4d"}
+					}
+				}
+			]
 		},
 		"macro": {
-			"name": "support.function.r4d",
-			"match": "\\$[a-zA-Z0-9_]*"
+			"match": "(\\$[a-zA-Z0-9_]*[\\*\\^\\?\\|\\+]*)\\(",
+			"captures": {
+				"1": {"name": "support.function.r4d"}
+			}
 		},
 		"literal": {
 			"name": "support.constant.r4d",
-			"match": "\\\\\\*.*?\\*\\\\"
+			"begin": "\\\\\\*",
+			"end": "\\*\\\\"
 		}
 	},
 	"scopeName": "source.r4d"
