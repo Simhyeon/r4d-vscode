@@ -7,6 +7,10 @@
 
 ## Release Notes
 
+### 0.0.3
+
+- Fixed a typo
+
 ### 0.0.2
 
 - Made syntax highlight much more "colorful"

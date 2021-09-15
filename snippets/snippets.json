@@ -182,63 +182,63 @@
 		"description":"Apply regex substitute"
 	},
 	"trim": {
-		"prefix": ["trim", "trim"],
+		"prefix": ["trim", "$trim"],
 		"body" : [
 			"\\$trim(${1:String})"
 		],
 		"description":"Trim whitespaces"
 	},
 	"chomp": {
-		"prefix": ["chomp", "chomp"],
+		"prefix": ["chomp", "$chomp"],
 		"body" : [
 			"\\$chomp(${1:String})"
 		],
 		"description":"Remove duplicate lines"
 	},
 	"comp": {
-		"prefix": ["comp", "comp"],
+		"prefix": ["comp", "$comp"],
 		"body" : [
 			"\\$comp(${1:String})"
 		],
 		"description":"Trim and chomp"
 	},
 	"nl": {
-		"prefix": ["nl", "nl"],
+		"prefix": ["nl", "$nl"],
 		"body" : [
 			"\\$nl()"
 		],
 		"description":"Print new line which respects formatter"
 	},
 	"lipsum": {
-		"prefix": ["lipsum", "lipsum"],
+		"prefix": ["lipsum", "$lipsum"],
 		"body" : [
 			"\\$lipsum(${1:Word count})"
 		],
 		"description":"Create placeholder text"
 	},
 	"time": {
-		"prefix": ["time", "time"],
+		"prefix": ["time", "$time"],
 		"body" : [
 			"\\$time()"
 		],
 		"description":"Print current local time"
 	},
 	"date": {
-		"prefix": ["date", "date"],
+		"prefix": ["date", "$date"],
 		"body" : [
 			"\\$date()"
 		],
 		"description":"Print current local date"
 	},
 	"from": {
-		"prefix": ["from", "from"],
+		"prefix": ["from", "$from"],
 		"body" : [
 			"\\$from(\\*${1:CSV value}*\\,${2:Macro name})"
 		],
 		"description":"Invoke macro for given csv contnet"
 	},
 	"table": {
-		"prefix": ["table", "table"],
+		"prefix": ["table", "$table"],
 		"body" : [
 			"\\$table(${1:Table format=github|wikitext|html},\\*${2:CSV value}*\\)"
 		],
