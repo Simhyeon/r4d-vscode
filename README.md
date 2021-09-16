@@ -7,6 +7,10 @@
 
 ## Release Notes
 
+### 0.0.4
+
+- Removed deterred attribute
+
 ### 0.0.3
 
 - Fixed a typo
