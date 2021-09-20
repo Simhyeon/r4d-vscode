@@ -58,7 +58,7 @@
 	"redir": {
 		"prefix": ["redir", "$redir"],
 		"body" : [
-			"\\$redir(${1:switch=true|false)"
+			"\\$redir(${1:switch=true|false})"
 		],
 		"description":"Redirect texts to temp file"
 	},
