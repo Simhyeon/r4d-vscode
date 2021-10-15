@@ -2,7 +2,7 @@
     "name": "r4d",
     "displayName": "R4d",
     "description": "Text oriented macro processor",
-    "version": "0.0.4",
+    "version": "0.1.0",
     "author": {
         "name": "simoncreek",
         "email": "simoncreek@tutanota.com"
@@ -16,7 +16,7 @@
         "type": "git",
         "url": "https://github.com/simhyeon/r4d-vscode"
     },
-    "keywords": ["cli","text processin", "macro"],
+    "keywords": ["cli","text processing", "macro"],
     "categories": [
         "Programming Languages"
     ],
