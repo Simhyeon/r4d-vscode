@@ -16,6 +16,7 @@
         "type": "git",
         "url": "https://github.com/simhyeon/r4d-vscode"
     },
+    "icon": "icon.png",
     "keywords": ["cli","text processing", "macro"],
     "categories": [
         "Programming Languages"
