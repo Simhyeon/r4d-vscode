@@ -20,6 +20,13 @@
 		],
 		"description":"Append to macro"
 	},
+	"replace": {
+		"prefix": ["repl", "$repl"],
+		"body" : [
+			"\\$repl(${1:Macro name},${2:Content})"
+		],
+		"description":"Replace macro content"
+	},
 	"pause": {
 		"prefix": ["pause", "$pause"],
 		"body" : [
@@ -33,6 +40,13 @@
 			"\\$include(${1:File name})"
 		],
 		"description":"Include file content"
+	},
+	"read": {
+		"prefix": ["read", "$read"],
+		"body" : [
+			"\\$read(${1:File name})"
+		],
+		"description":"Read file content's as bufstream not a chunk"
 	},
 	"temp out": {
 		"prefix": ["tempout", "$tempout"],
@@ -76,6 +90,20 @@
 		],
 		"description":"Get environment variable"
 	},
+	"parent": {
+		"prefix": ["parent", "$parent"],
+		"body" : [
+			"\\$parent(${1:Path})"
+		],
+		"description":"Get parent from given path"
+	},
+	"name": {
+		"prefix": ["name", "$name"],
+		"body" : [
+			"\\$name(${1:Path})"
+		],
+		"description":"Get name from given path"
+	},
 	"path": {
 		"prefix": ["path", "$path"],
 		"body" : [
@@ -83,12 +111,26 @@
 		],
 		"description":"Merge two values into a single path"
 	},
+	"paths": {
+		"prefix": ["paths", "$paths"],
+		"body" : [
+			"\\$paths(${1:Path Vector})"
+		],
+		"description":"Merege path vector into a single path"
+	},
 	"bind": {
 		"prefix": ["bind", "$bind"],
 		"body" : [
 			"\\$bind(${1:Binding name},${2:Content to bind})"
 		],
 		"description":"Create a local binding(alias)"
+	},
+	"global": {
+		"prefix": ["global", "$global"],
+		"body" : [
+			"\\$global(${1:Global name},${2:Content to bind})"
+		],
+		"description":"Create a global bind"
 	},
 	"pipe": {
 		"prefix": ["pipe", "$pipe"],
@@ -125,6 +167,13 @@
 		],
 		"description":"Evaluate expression"
 	},
+	"not": {
+		"prefix": ["not", "$not"],
+		"body" : [
+			"\\$not(${1:true|false})"
+		],
+		"description":"Invert boolean value"
+	},
 	"if": {
 		"prefix": ["if", "$if"],
 		"body" : [
@@ -142,9 +191,16 @@
 	"ifdef": {
 		"prefix": ["ifdef", "$ifdef"],
 		"body" : [
-			"\\$ifdef(${1:Macro name})"
+			"\\$ifdef(${1:Macro name},${2:Content})"
 		],
-		"description":"Check if macro exists"
+		"description":"If macro is defined then print content"
+	},
+	"ifenv": {
+		"prefix": ["ifenv", "$ifenv"],
+		"body" : [
+			"\\$ifenv(${1:Env name},${2:Content})"
+		],
+		"description":"If environemtn variable is defined then print content"
 	},
 	"syscmd": {
 		"prefix": ["syscmd", "$syscmd"],
@@ -233,14 +289,14 @@
 	"from": {
 		"prefix": ["from", "$from"],
 		"body" : [
-			"\\$from(\\*${1:CSV value}*\\,${2:Macro name})"
+			"\\$from+(${1:Macro name},${2:CSV value})"
 		],
 		"description":"Invoke macro for given csv contnet"
 	},
 	"table": {
 		"prefix": ["table", "$table"],
 		"body" : [
-			"\\$table(${1:Table format=github|wikitext|html},\\*${2:CSV value}*\\)"
+			"\\$table+(${1:Table format=github|wikitext|html},${2:CSV value})"
 		],
 		"description":"Remove duplicate lines"
 	}
